@@ -10,3 +10,15 @@ import IOrdersRepository from '@modules/orders/repositories/IOrdersRepository';
 import OrdersRepository from '@modules/orders/infra/typeorm/repositories/OrdersRepository';
 
 // TODO
+container.registerSingleton<ICustomersRepository>(
+  'CustomersRepositoryContainer',
+  CustomersRepository,
+);
+container.registerSingleton<IProductsRepository>(
+  'ProductsRepositoryContainer',
+  ProductsRepository,
+);
+container.registerSingleton<IOrdersRepository>(
+  'OrdersRepositoryContainer',
+  OrdersRepository,
+);
